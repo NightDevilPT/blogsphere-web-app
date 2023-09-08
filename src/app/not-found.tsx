@@ -1,8 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
-import starback from '../images/starback2.jpg';
 import Image from "next/image";
+import dynamic from "next/dynamic";
+import starback from '../images/starback2.jpg';
 
 
 const Custome404 = () => {

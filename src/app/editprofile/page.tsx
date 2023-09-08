@@ -1,15 +1,19 @@
 "use client";
 
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 import avtar from "../../images/avtar.png";
-import { EditProfileType, UserType } from "@/types/AllType";
-import { useAppDispatch, useAppSelector } from "@/redux/store";
-import ImageCropper from "@/components/ImageCropper/ImageCropper";
-import EditFormFrame from "@/components/EditFormFrame";
+import { EditProfileType } from "@/types/AllType";
+import { useAppSelector } from "@/redux/store";
+
 import { MdOutlineClose } from "react-icons/md";
+
+const ImageCropper = dynamic(()=>import('@/components/ImageCropper/ImageCropper'))
+const EditFormFrame = dynamic(()=>import('@/components/EditFormFrame'))
+
 
 const page = () => {
 	const router = useRouter();

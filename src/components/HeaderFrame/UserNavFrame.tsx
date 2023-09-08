@@ -121,7 +121,8 @@ const UserNavFrame = () => {
 							? "text-slate-300 hover:bg-slate-300 hover:text-slate-800"
 							: "text-slate-800 hover:bg-slate-800 hover:text-slate-300"
 					}`}
-					href={"/"}
+					href={"/profile"}
+					onClick={()=>{setShowUserNav(false)}}
 				>
 					<CgProfile className="h-[25px] w-[25px]" />
 					<span>My Profile</span>
